@@ -10,6 +10,10 @@ var swap = function (arr, idx1, idx2) {
     arr[idx1] = tmp;
 }
 
+
+/**
+ * 시간 복잡도 O(N)
+ */
 var removeElement = function(nums, val) {
     let endIndex = nums.length - 1; 
     let i = 0; 
@@ -29,3 +33,18 @@ var removeElement = function(nums, val) {
 // https://en.wikipedia.org/wiki/In-place_algorithm 
 
 removeElement([3,2,2,3], 3)
+
+var removeElement2 = function(nums, val) {
+    let idx = 0;
+
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] !== val){
+            nums[idx] = nums[i];
+            idx++
+        } 
+    }
+    return idx
+  
+};
+
+removeElement2([0,1,2,2,3,0,4,2], 2);
