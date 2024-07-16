@@ -48,3 +48,26 @@ var removeElement2 = function(nums, val) {
 };
 
 removeElement2([0,1,2,2,3,0,4,2], 2);
+
+
+/** 1번 방식과 동일 */
+var removeElement3 = function(nums, val) {
+
+     let sp = 0;
+     let ep = nums.length - 1;
+     let cnt = 0;
+
+     while(sp <= ep) {
+        
+        if(nums[sp] == val) {
+            nums[sp] = nums[ep];
+            ep--;
+            cnt++;
+        } else {
+            sp++;
+        }
+     }
+    return nums.length - cnt;
+};
+
+removeElement3([0,1,2,2,3,0,4,2], 2);
