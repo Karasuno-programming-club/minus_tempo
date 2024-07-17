@@ -22,9 +22,25 @@ var removeDuplicates = function (nums) {
     }
     return k;
 };
-  
-removeDuplicates([0,0,1,1,1,1,2,3,3]);
+
 
 /**
  * 시간 복잡도 O(N)
  */
+removeDuplicates([0,0,1,1,1,1,2,3,3]);
+
+
+var removeDuplicates2 = function (nums) {
+    let p = 0;
+
+    for(let i = 0; i < nums.length; i++) {
+        if(nums[i] != nums[i+2]) {
+            nums[p] = nums[i];
+            p++;
+        } 
+    }
+
+    return p;
+};
+
+removeDuplicates2([0,0,1,1,1,1,2,3,3]);
