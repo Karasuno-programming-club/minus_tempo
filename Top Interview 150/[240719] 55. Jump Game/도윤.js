@@ -1,6 +1,5 @@
 var canJump = function(nums) {
-
-
+    
     let result = false;
     let jumpIdx = 0;
 
