@@ -15,4 +15,17 @@ class Solution:
         for n in nums:
             answer.append(int(prd/n))
         return answer
-        
+# 나누기 쓰면 안됨
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        cur = 1
+        ans = [1 for _ in range(len(nums))]
+        for i in range(len(nums)):
+            ans[i] *= cur
+            cur *= nums[i]
+        cur = 1
+        for i in range(len(nums)-1, -1, -1):
+            ans[i] *= cur
+            cur *= nums[i]
+        return ans
