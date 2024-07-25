@@ -34,7 +34,37 @@ var romanToInt = function(s) {
     return sum;
 };  
 
-
-
-
 romanToInt("MCMXCIV")
+
+
+var romanToInt2 = function(s) {
+    
+    const charArr = s.split("");
+    const map = new Map();
+
+    map.set("I", 1);
+    map.set("V", 5);
+    map.set("X", 10);
+    map.set("L", 50);
+    map.set("C", 100);
+    map.set("D", 500);
+    map.set("M", 1000);
+    
+
+    let sum = 0;
+    let i = 0;
+
+    while (i < charArr.length) {
+        const val = map.get(charArr[i]);
+        const nextVal = map.get(charArr[i+1]);
+        i++
+
+        if(!nextVal) return sum += val;
+        sum += val >= nextVal ? val : -val;
+        
+    }
+    
+    return sum;
+};  
+
+console.log(romanToInt2("MCMXCIV"));
