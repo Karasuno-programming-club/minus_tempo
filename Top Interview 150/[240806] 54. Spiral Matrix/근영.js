@@ -6,9 +6,12 @@ var spiralOrder = function (matrix) {
   let curX = 0; // position of x
   let curY = 0; // position of y
 
-  while (answer.length < m * n) {
+  while (answer.length < matrix.length * matrix[0].length) { //m n 값을 사용하면안됨
+
+    console
     // 정방향
     if (curX !== m) {
+
       for (let i = 0; i < m; i++) {
         answer.push(matrix[curY][i]);
         curX = i;
@@ -19,9 +22,9 @@ var spiralOrder = function (matrix) {
         answer.push(matrix[i][curX]);
         curY = i;
       }
-    }
-    // 역방향
-    else {
+    } else { //역방향
+      console.log('역방향');
+      console.log(answer);
       for (let i = curX; i >= curX - m; i--) {
         answer.push(matrix[curY][i]);
         curX = i;
@@ -33,9 +36,11 @@ var spiralOrder = function (matrix) {
         curY = i;
       }
     }
+
     m--;
     n--;
   }
+
   return answer;
 };
 
