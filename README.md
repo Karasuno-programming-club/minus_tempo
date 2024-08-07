@@ -26,7 +26,9 @@
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=rootzero17)](https://solved.ac/rootzero17/)
 
-### 도윤
+### 도윤(실버(진))
+
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=sorryisme)](https://solved.ac/sorryisme/)
 
 <br/>
 
