@@ -30,6 +30,10 @@
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=sorryisme)](https://solved.ac/sorryisme/)
 
+### 정훈(플래티넘(ㅎ))
+
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=lifthus531)](https://solved.ac/lifthus531/)
+
 <br/>
 
 ### 폴더 작성 방법
