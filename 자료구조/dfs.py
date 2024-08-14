@@ -14,21 +14,19 @@ M = int(input()) # M개의 간선
 
 # 1) 인접 리스트 만들기
 lst = [[] for _ in range(N+1)]
-for i in range(2, N+1):
+for i in range(M):
     start, end = map(int, input().split())
     lst[start].append(end)
     lst[end].append(start)
 
 # 2) 방문했던 노드 저장할 리스트
-visited = [False] * (N + 1)
+visited = [0] * (N+1)
 
 # 3) dfs
-def dfs(graph, v, visited):
+def dfs(v):
     visited[v] = 1
-    print(v, end=" ")
+    for i in lst[v]:
+        if visited[i] == 0:
+            dfs(i)
 
-    for i in graph[v]:
-        if not visited[i]:
-            dfs(graph, i, visited)
-
-dfs(lst, 1, visited)
+dfs(1)
