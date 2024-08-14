@@ -8,6 +8,7 @@
 # 5 2
 # 5 6
 # 4 7
+from collections import deque
 
 N = int(input()) # N개의 노드(1~N)
 M = int(input()) # M개의 간선
@@ -22,12 +23,19 @@ for i in range(M):
 # 2) 방문했던 노드 저장할 리스트
 visited = [0] * (N+1)
 
-# 3) dfs
-# 스택에 콜백함수를 쌓아가며 구현
-def dfs(v):
-    visited[v] = 1
-    for i in lst[v]:
-        if visited[i] == 0:
-            dfs(i)
-
-dfs(1)
+# 3) bfs
+def bfs(start):
+    queue = deque([start])
+    # 현재 노드 방문 처리
+    visited[start] = 1
+    # 큐가 빌 때까지 반복
+    while queue:
+        # 큐에서 하나 출력
+        v = queue.popleft()
+        print(v, end=' ')
+        for i in lst[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = 1
+      
+bfs(1)
