@@ -2,7 +2,7 @@
 # 같은 수를 여러 번 골라도 된다.
 
 import sys
-input = sys.stdin.reQadline
+input = sys.stdin.readline
 
 N, M = map(int, input().split())
 lst = list(map(int, input().split()))
