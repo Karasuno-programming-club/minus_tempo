@@ -29,3 +29,11 @@ def binary_search(array, target, start, end):
         else :
             start = mid + 1
     return -1
+
+# '정렬된 리스트'에서 `값이 특정 범위에 속하는 원소의 개수`를 구할 때
+from bisect import bisect_left, bisect_right
+
+def count_by_range(list, left_value, right_value):
+    right_index = bisect_right(list, right_value)
+    left_index = bisect_left(list, left_value)
+    return right_index - left_index
