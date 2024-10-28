@@ -9,17 +9,11 @@
 // 2-2) split(' ') - 한 줄 입력 받을 때 / spilt('\n') - 여러 줄 입력 받을 때
 
 const INPUT = require("fs")
-  .readFileSync("input.txt")
+  .readFileSync(process.platform === "linux" ? "/dev/stdin" : "input.txt")
   .toString()
   .trim()
-  .split("\n")
-  // .split(' ')
-  .map(Number);
+  .split("\n");
 
-function solution() {
-  /**
-   * 문제는 여기에 풉니다
-   */
-}
+function solution() {}
 
 solution();
