@@ -14,6 +14,8 @@ const INPUT = require("fs")
   .trim()
   .split("\n");
 
-function solution() {}
+function solution() {
+ 
+}
 
 solution();
